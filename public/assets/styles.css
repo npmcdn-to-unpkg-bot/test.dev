@@ -1,0 +1,36 @@
+body{
+    font-family: "Roboto";
+    padding-top: 50px;
+}
+
+/*@media screen and (min-device-width: 1024px){*/
+    /*aside{*/
+        /*width: 200px;*/
+    /*}*/
+/*}*/
+
+.content-block{
+    padding: 40px 0;
+}
+
+.tree-block{
+    padding: 20px 0;
+}
+
+.prod-records{
+    padding:20px 0;
+}
+
+#aside-menu{
+    padding:0 20px 0 0;
+}
+
+#aside-menu > ul.nav > li{
+    border-bottom: 1px solid #00b3ee;
+}
+#aside-menu >ul.nav >li+li{
+    margin-top: 0;
+}
+#aside-menu  ul.nav >li > a{
+    border-radius: 0;
+}
