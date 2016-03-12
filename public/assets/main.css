@@ -1,0 +1,368 @@
+html{
+    position: relative;
+    min-height: 100%;
+}
+body{
+    font-weight: 300;
+    font-family:"Roboto",Arial, sans-serif;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    min-height: 100%;
+}
+
+
+a:focus,#filter-block a{
+    outline: none;
+}
+
+.wrapper{
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#main-menu{
+    border-color: transparent !important;
+}
+
+.navbar-brand >  img{
+    display: block;
+    position: absolute;
+    width: 66px;
+    height: 66px;
+    top: 0;
+    z-index:1040;
+}
+
+.bg-primary{
+    background-color: #63c68e;
+}
+.bg-inverse{
+    background-color: #555555;
+}
+
+#main-menu li > a{color: #FFFFFF; font-weight: 400;
+    -webkit-transition: color .4s ease .2s;
+    -moz-transition: color .4s ease .2s;
+    -ms-transition: color .4s ease .2s;
+    -o-transition: color .4s ease .2s;
+    transition: color .4s ease .2s;}
+#main-menu li:hover > a{color:#63c68e !important;}
+#main-menu li:not(:last-of-type):after{
+    position: absolute;
+    display: block;
+    content: '';
+    right: 0;
+    top: calc(50% - 12px);
+    z-index: 1020;
+    width: 1px;
+    height:50%;
+    /* background-color: rgba(255,255,255,0.2);*/
+}
+
+.gallery{
+    height: 400px;
+    width: 100%;
+}
+
+.gallery-cell{
+    height: 100%;
+    width: 100%;
+    margin-right: 10px;
+    background-color:#e3e3e3;
+}
+.gallery-cell .caption{
+  position: absolute;
+    bottom: 30px;
+    right: 40px;
+    font: 100 30px/20px "Lobster";
+    color: #ffffff;
+    padding: 20px 10px;
+    text-align: right;
+    width: auto;
+}
+
+.caption svg{
+   position: absolute;
+    right: -30px;
+    top: 50%;
+    margin-top: -14px;
+    fill: #ffffff;
+    stroke: 10px;
+}
+
+.flickity-page-dots{
+    bottom: 10px;
+}
+
+.flickity-prev-next-button {
+    width: 70px;
+    height: 70px;
+    background: transparent;
+}
+.flickity-prev-next-button:hover {
+    background: transparent;
+}
+/* arrow color */
+.flickity-prev-next-button .arrow {
+    fill: #ffffff;
+    opacity: .8;
+}
+.flickity-prev-next-button.no-svg {
+    color: white;
+}
+/* hide disabled button */
+.flickity-prev-next-button:disabled {
+    display: none;
+}
+/* white circles */
+.flickity-page-dots .dot {
+    width: 12px;
+    height: 12px;
+    background: transparent;
+    border: 2px solid #ffffff;
+    opacity: .8;
+}
+/* fill-in selected dot */
+.flickity-page-dots .dot.is-selected {
+    background: white;
+}
+
+.flickity-slider {
+    transform: none !important;
+}
+
+.gallery-cell {
+    left: 0 !important;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: -1;
+}
+
+.gallery-cell.is-selected {
+    opacity: 1;
+    z-index: 0
+}
+
+.info-block{
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+.info-block > .info-block-item{
+    position: relative;
+    box-sizing: border-box;
+    float: left;
+    height: auto;
+    text-overflow: ellipsis;
+    font: 100 14px/20px "Roboto";
+    color: #777777;
+    overflow: hidden;
+    width: 30%;
+    margin: 0 1.65%;
+    padding: 20px 5px;
+    word-break: break-all;
+}
+
+.info-block > .info-block-item > p{ position:relative; padding-bottom: 20px; border-bottom: 3px solid #d4d4d4; }
+.info-block > .info-block-item > p:before{
+    display: block;
+    position: absolute;
+    content: '';
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    border-top: 10px solid #d4d4d4;
+    left: calc(50% - 13px);
+    bottom: -12px;
+}
+
+
+.info-block-item > svg.icon{
+    padding: 2px;
+    fill: #00b3ee;;
+    border: 1px solid #00b3ee;
+    border-radius: 50%;
+}
+
+#content{
+    margin-bottom: 150px;
+    /*   margin-top: 60px;*/
+    padding-top: 20px;
+    padding-bottom: 50px;
+    line-height: 1.5em;
+}
+/*@media screen {
+    aside{
+        position: relative;
+        max-width: 200px;
+        width: 100%;
+        float: left;
+        margin: 0 5px;
+    }
+}
+*/
+aside > .header{
+    position: relative;
+    width: 100%;
+    display: block;
+    padding: 5px 15px;
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
+aside > .header:before,
+aside > .header:after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    top: 100%;
+    z-index: 10;
+}
+aside > .header:before{
+    left:calc(50% - 10px);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 5px solid #63c68e;
+    z-index: 10;
+}
+aside > .header:after{
+    border-top:#ffffff 7px solid;
+    border-left: transparent 14px solid;
+    border-right: transparent 14px solid;
+    left: calc(50% - 14px);
+    z-index: 9;
+}
+
+#menu {
+    padding: 0;
+    font: 100 14px/17px "Roboto";
+    text-transform: capitalize}
+#menu > ul > li:not(:last-of-type){border-bottom: 1px solid #e3e3e3}
+#menu ul > li + li{margin-top: 0}
+#menu li > a{color: #777777; font-weight: 500}
+#menu li.active > a{color: #63c68e;background-color:#e7e7e7}
+#menu > ul > li:not(:last-child) {
+    /*border-bottom: 1px solid #e7e7e7;*/
+    padding: 0
+}
+#menu > ul li > ul li a{padding-left: 30px; font-weight: lighter}
+#menu li.active > ul li > a{color:#777777; padding-left: 30px}
+#menu li > ul li:hover a{background-color: transparent; text-decoration: underline}
+
+.catalog-item{margin-bottom: 20px}
+.catalog-item svg.new{
+    position: absolute;
+    top: 4px;
+    right: 4px;
+}
+
+.img-thumbnail{border-color: #e3e3e3; border-radius: 0px}
+.img-thumbnail:hover{box-shadow:0 0 10px #d5d5d5}
+.image-popup{ position: relative; }
+.product-label{ font: 400 15px/15px "Roboto"; color: #777777}
+
+.mfp-popup{
+    position: relative;
+    background-color: #ffffff;
+    padding: 20px;
+    width: auto;
+    max-width: 500px;
+    margin: 5% auto;
+}
+
+.breadcrumb{
+    position: relative;
+    margin-top: 20px;
+    font: 100 13px "Roboto";
+    background-color: transparent;
+    z-index: 10;
+}
+
+.breadcrumb li+li:before{padding: 0 2px}
+.breadcrumb > li > a{color: #63c68e}
+.breadcrumb > li::first-letter{text-transform: uppercase !important;}
+
+.filter-block-left{
+    margin: 10px 0;
+}
+
+#filter-block{
+    margin-bottom: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid #e3e3e3;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+#filter-block a.link-filter{color: #777777; padding: 5px 10px; text-decoration: none}
+#filter-block a.link-filter > i{padding-left: 10px; color: #eea236}
+#filter-block .sort-label{padding: 6px 10px;}
+#filter-block li > a{ color:#555555; text-decoration: underline}
+#filter-block li.active{
+    background-color: #eea236;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+#filter-block li.active > a{ color: #ffffff; font-weight: 500; text-decoration: none}
+
+
+.filtrate{margin-top: 20px; border:1px solid #e3e3e3; padding-bottom: 10px}
+.filtrate > form  .filtrate-block-item{
+    color: #777777;
+    font: 100 13px/17px "Arial";
+}
+.filtrate > form  .btn-filter{
+    background-color: #eea236;
+    font:700 15px/15px "Arial";
+    color: #ffffff;
+    border-radius: 0;
+    text-shadow: 0 1px 3px #875921;
+}
+
+.filter-btn > ul > li{padding: 0 10px;}
+.filter-btn > ul > li > span{padding-left:15px; font-weight: 100}
+
+
+
+.pagination > li > a,
+.pagination > li > span{ border: transparent}
+.pagination > li > a{color:#555555}
+.pagination >.active > span{background-color: #eea236}
+.pagination >.active:hover > span{background-color: #cd902f
+}
+
+
+#sendMessage .control-label{
+    font: 100 12px "Arial";
+}
+
+small.error{
+    color: #B94A48;
+}
+
+footer{
+    position: absolute;
+    display: table-row;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 10px;
+    /* Set the fixed height of the footer here */
+    height: 150px;
+    border-top: 1px solid #dcdcdc;
+    color: rgba(173, 255, 196, 1);
+    background-color: #63c68e;
+    font: 300 14px/15px "Roboto";
+    overflow: hidden;
+}
+
+footer .copyright{padding-top: 10px}
+
+footer a{color: rgba(173, 255, 196, 1);}
+footer a > i{width: 30px; height: 30px; border: 1px solid rgba(173, 255, 196, 1); padding: 7px; border-radius: 50%; color: #ffffff}
+footer a:hover{text-decoration: none;color: #ffffff}
+footer a:hover > i{border-color: #ffffff}
+footer h4{font:500 15px/15px "Roboto"; color: #ffffff;}

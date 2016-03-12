@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Back;
 
 use App\Category;
 use App\User;
+use App\Vacancy;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -38,6 +39,14 @@ class DashboardController extends Controller
         $categories=Category::defaultOrder()->get();
 
         return view('back.categories.index',compact('categories'));
+    }
+
+    public function vacancies(){
+
+        $vacancies=Vacancy::all();
+
+        return response(view('back.vacancies.index',compact('vacancies')));
+
     }
 
 }

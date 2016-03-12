@@ -27,10 +27,9 @@ class ProductCreateConfirm
     public function handle(ProductCreate $event)
     {
 
-        if(!\Storage::disk('catalog')->exists($event->product->model))
+        if(!\Storage::disk('uploads')->exists($event->product->model))
             try {
-                \Storage::disk('catalog')->makeDirectory($event->product->model);
-                \Storage::disk('catalog')->makeDirectory($event->product->model . '/small');
+                \Storage::disk('uploads')->makeDirectory($event->product->model);
             }catch(\Exception $ex){
                 \Log::error($ex->getFile().' - '.$ex->getMessage());
             }

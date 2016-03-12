@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Category;
 use Illuminate\Routing\Router;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
@@ -27,6 +28,10 @@ class RouteServiceProvider extends ServiceProvider
         //
 
         parent::boot($router);
+        $router->model('product','App\Product');
+        $router->bind('category',function($category){
+            return Category::where('name',$category)->first();
+        });
     }
 
     /**

@@ -26,7 +26,7 @@ class ProductCreate extends Request
         return [
 
             'model'=>'required',
-            'category'=>'required',
+            'category_id'=>'required',
             'description'=>'required'
 
         ];
@@ -36,7 +36,7 @@ class ProductCreate extends Request
     {
         return [
             'model.required'=>'необходимо указать модель',
-            'category.required'=>'необходимо выбрать по-крайней мере одну категорию',
+            'category_id.required'=>'необходимо выбрать категорию',
             'description.required'=>'необходимо что-нибудь указать в описании'
         ];
     }

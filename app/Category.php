@@ -20,7 +20,7 @@ class Category extends Node
 
     public function products(){
 
-        return $this->belongsToMany('App\Product');
+        return $this->hasMany('App\Product');
 
     }
 
@@ -36,7 +36,7 @@ class Category extends Node
 
         $rules=array(
             'name'=>array('required','regex:/^[a-zA-Z-]+$/'),
-            'name_ru'=>array('required','regex:/^[а-яА-Я-]+$/u')
+            'name_ru'=>array('required','regex:/^[а-яА-Я-\s]+$/u')
         );
 
         if ($this->exists && ! $this->isRoot())
@@ -46,4 +46,6 @@ class Category extends Node
 
         return $rules;
     }
+
+
 }

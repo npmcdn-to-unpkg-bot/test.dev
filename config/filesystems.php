@@ -48,9 +48,9 @@ return [
             'root'   => storage_path('app'),
         ],
 
-        'catalog'=>[
+        'uploads'=>[
             'driver'=>'local',
-            'root'=>public_path().'/catalog'
+            'root'=>public_path().'/uploads'
         ],
 
         'ftp' => [

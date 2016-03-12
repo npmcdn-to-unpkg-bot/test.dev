@@ -14,10 +14,9 @@ class ProductController extends Controller
 
     public function index(){
 
-        $products=Product::all();
+        $products=Product::with('categories')->get();
 
-        return \Response::make(view('products.list')->with('products',$products));
-
+        return response()->view('front.catalog.list',compact('products'));
 
     }
 

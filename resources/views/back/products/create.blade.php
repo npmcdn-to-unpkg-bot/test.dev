@@ -6,7 +6,7 @@
             <h4> <u>Добавить изделие в каталог</u></h4>
             <form class="form-horizontal" action="{{route('api.products.store')}}" method="post" id="storeProduct">
                 {{csrf_field()}}
-                <div class="form-group-sm">
+                <div class="form-group-sm group-model">
                     <label class="control-label">Модель</label>
                     <input type="text" class="form-control" name="model">
                 </div>
@@ -24,16 +24,15 @@
                 </div>
                 <div class="form-group-sm">
                     <label class="control-label">Сезон</label>
-                    <select id="select-season"  placeholder="Выберите сезон..." name="season[]" multiple>
+                    <select id="select-season" class="form-control"  name="season[]" multiple>
                         @foreach($seasons as $season)
                             <option value="{{$season->id}}">{{$season->slug}}</option>
                         @endforeach
                     </select>
                 </div>
-                <div class="form-group-sm">
+                <div class="form-group-sm group-category">
                     <label class="control-label">Категория</label>
-                    <select id="select-category"  name="category[]" placeholder="Выберите категорию..." multiple>
-
+                    <select id="select-category" class="form-control"  name="category_id" multiple>
                         @foreach($categories as $category)
                             @if($category->isRoot())
                                 <optgroup label="{{$category->name_ru}}">
@@ -47,24 +46,23 @@
                         @endforeach
                     </select>
                 </div>
-
                 <div class="form-group-sm">
                     <label class="control-label">Материал</label>
-                    <select id="select-material" placeholder="Выберите материал..." name="material[]" multiple>
+                    <select id="select-material" class="form-control" placeholder="Выберите материал..." name="material[]" multiple>
                         @foreach($materials as $material)
                             <option value="{{$material->id}}">{{$material->name_ru}}</option>
                         @endforeach
                     </select>
                 </div>
 
-                <div class="form-group-sm">
-                    <label class="control-label">Описание</label>
-                    <textarea class="form-control" name="description"></textarea>
+                <div class="form-group-sm group-description">
+                    {!! Form::label('description','Описание:') !!}
+                    {!! Form::textarea('description',null,['class'=>'form-control']) !!}
                 </div>
 
                 <div class="form-group-sm col-md-4">
                     <label class="control-label">Новое изделие?</label>
-                    <select id="select-new" name="new" placeholder="...">
+                    <select id="select-new" class="form-control" name="new" placeholder="...">
                         <option value="1">Да</option>
                         <option value="0">Нет</option>
                     </select>

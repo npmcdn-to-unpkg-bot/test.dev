@@ -1,3 +1,17 @@
+
+#<IfModule mod_headers.c>
+#    # WEEK
+#    <FilesMatch "\.(jpg|jpeg|png|gif|swf)$">
+#       Header set Cache-Control "private"
+#    </FilesMatch>
+#</IfModule>
+#
+#<IfModule mod_expires.c>
+#     ExpiresActive On
+#        ExpiresDefault "access plus 1 hours"
+#        ExpiresByType image/jpeg "access plus 1 hours"
+#</IfModule>
+
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
         Options -MultiViews

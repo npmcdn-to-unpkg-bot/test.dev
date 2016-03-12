@@ -3,6 +3,9 @@ body{
     padding-top: 50px;
 }
 
+
+label{font-weight: 300;}
+
 /*@media screen and (min-device-width: 1024px){*/
     /*aside{*/
         /*width: 200px;*/
@@ -34,3 +37,18 @@ body{
 #aside-menu  ul.nav >li > a{
     border-radius: 0;
 }
+
+#records-table >tbody >tr.selected{
+    background: #e0e0e0;
+}
+
+
+.img-item{padding:5px}
+.photo{position:relative; padding: 2px; border: 1px solid #e0e0e0}
+.base-photo:after{
+    position: absolute;
+    display: block;
+    content: '';
+    background-color: #00b3ee;
+}
+

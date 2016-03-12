@@ -19,6 +19,9 @@ class EventServiceProvider extends ServiceProvider
 
         'App\Events\ProductCreate'=>[
             'App\Listeners\ProductCreateConfirm'
+        ],
+        'App\Events\ProductDelete'=>[
+            'App\Listeners\ProductDeleteHandler'
         ]
     ];
 

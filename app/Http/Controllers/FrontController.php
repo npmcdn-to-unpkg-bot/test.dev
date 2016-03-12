@@ -17,12 +17,9 @@ class FrontController extends Controller
     }
 
 
-
-
-
     public function about(){
 
-        return response()->view('front.about');
+        return response()->view('front.about.history');
 
     }
 
@@ -30,13 +27,13 @@ class FrontController extends Controller
 
     public function news(){
 
-  return response()->view('front.news');
+        return response()->view('front.news');
 
     }
 
     public function contacts(){
 
-        return response()->view('front.contact');
+        return response()->view('front.contact.phones');
 
     }
 
