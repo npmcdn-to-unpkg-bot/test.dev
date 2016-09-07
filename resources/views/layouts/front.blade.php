@@ -10,7 +10,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="{{asset('/assets/metisMenu/dist/metisMenu.css')}}" rel="stylesheet">
     <link href="{{asset('/assets/magnific-popup/dist/magnific-popup.css')}}" rel="stylesheet">
-    <link rel="stylesheet" href="https://npmcdn.com/flickity@1.1/dist/flickity.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@1.1/dist/flickity.css">
     <link href="{{asset('/assets/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css')}}" rel="stylesheet"/>
     <link href="{{asset('/assets/main.css')}}" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -212,7 +212,7 @@
 <script src="{{asset('assets/metisMenu/dist/metisMenu.js')}}"></script>
 <script src="{{asset('assets/magnific-popup/dist/jquery.magnific-popup.min.js')}}"></script>
 <script src="{{asset('assets/jquery-validation/dist/jquery.validate.js')}}"></script>
-<script src="https://npmcdn.com/flickity@1.1/dist/flickity.pkgd.js"></script>
+<script src="https://unpkg.com/flickity@1.1/dist/flickity.pkgd.js"></script>
 <script src="{{asset('assets/scripts/mfp.ex.ru.js')}}"></script>
 <script src="{{asset('assets/scripts/script.front.js')}}"></script>
 <script src="{{asset('assets/scripts/filtrate.js')}}"></script>
